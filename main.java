@@ -1,86 +1,72 @@
 class Microcontroller{
-    private int bit_rate;
-    private double CPU_clock_speed; // clock speed in GHz
+
+    private int bitRate;
+    private double CPUClockSpeed; // clock speed in GHz
     private String producer;
 
-    private int year_of_production;
+    private int yearOfProduction;
     private String name;
     private int memory; // memory in KB
     private int height; // height in mm
     private int width; // width in mm
 
-    static public int working_hours;
+    static public int workingHours;
 
-    protected String too_many_fields;
-    protected int number_of_LEDs;
+    protected String tooManyFields;
+    protected int numberOfLEDs;
 
     static{
-        working_hours = 5000;
+        workingHours = 5000;
     }
 
     public Microcontroller() {
-    bit_rate = 64;
-    CPU_clock_speed = 3.6;
+    bitRate = 64;
+    CPUClockSpeed = 3.6;
     producer = "Intel";
 
-    year_of_production = 2017;
+    yearOfProduction = 2017;
     name = "Intel core i3";
     memory = 2048; 
     height = 2;
     width = 38;
 
-    too_many_fields = "Yes";
-    number_of_LEDs = 0;
+    tooManyFields = "Yes";
+    numberOfLEDs = 0;
     }
 
-    public Microcontroller(int bit_rate, double CPU_clock_speed, String producer, int year_of_production) {
-        this.bit_rate = bit_rate;
-        this.CPU_clock_speed = CPU_clock_speed;
+    public Microcontroller(int bitRate, double CPUClockSpeed, String producer, int yearOfProduction) {
+        this.bitRate = bitRate;
+        this.CPUClockSpeed = CPUClockSpeed;
         this.producer = producer;
-        this.year_of_production = year_of_production;
+        this.yearOfProduction = yearOfProduction;
     }
 
-    public Microcontroller(int bit_rate, double CPU_clock_speed, String producer, int year_of_production, 
-                           String name, int memory, int height, int width, String too_many_fields, int number_of_LEDs){
-        this(bit_rate, CPU_clock_speed, producer, year_of_production);
+    public Microcontroller(int bitRate, double CPUClockSpeed, String producer, int yearOfProduction, 
+                           String name, int memory, int height, int width, String tooManyFields, int numberOfLEDs){
+        this(bitRate, CPUClockSpeed, producer, yearOfProduction);
         this.name = name;
         this.memory = memory;
         this.height = height;
         this.width = width;
-        this.too_many_fields = too_many_fields;
-        this.number_of_LEDs = number_of_LEDs;
+        this.tooManyFields = tooManyFields;
+        this.numberOfLEDs = numberOfLEDs;
     }
 
-    public String getToo_many_fields() {
-        return this.too_many_fields;
+
+    public int getBitRate() {
+        return this.bitRate;
     }
 
-    public void setToo_many_fields(String too_many_fields) {
-        this.too_many_fields = too_many_fields;
+    public void setBitRate(int bitRate) {
+        this.bitRate = bitRate;
     }
 
-    public int getNumber_of_LEDs() {
-        return this.number_of_LEDs;
+    public double getCPUClockSpeed() {
+        return this.CPUClockSpeed;
     }
 
-    public void setNumber_of_LEDs(int number_of_LEDs) {
-        this.number_of_LEDs = number_of_LEDs;
-    }
-
-    public int getBit_rate() {
-        return this.bit_rate;
-    }
-
-    public void setBit_rate(int bit_rate) {
-        this.bit_rate = bit_rate;
-    }
-
-    public double getCPU_clock_speed() {
-        return this.CPU_clock_speed;
-    }
-
-    public void setCPU_clock_speed(int CPU_clock_speed) {
-        this.CPU_clock_speed = CPU_clock_speed;
+    public void setCPUClockSpeed(double CPUClockSpeed) {
+        this.CPUClockSpeed = CPUClockSpeed;
     }
 
     public String getProducer() {
@@ -91,12 +77,12 @@ class Microcontroller{
         this.producer = producer;
     }
 
-    public int getYear_of_production() {
-        return this.year_of_production;
+    public int getYearOfProduction() {
+        return this.yearOfProduction;
     }
 
-    public void setYear_of_production(int year_of_production) {
-        this.year_of_production = year_of_production;
+    public void setYearOfProduction(int yearOfProduction) {
+        this.yearOfProduction = yearOfProduction;
     }
 
     public String getName() {
@@ -131,54 +117,71 @@ class Microcontroller{
         this.width = width;
     }
 
+    public String getTooManyFields() {
+        return this.tooManyFields;
+    }
+
+    public void setTooManyFields(String tooManyFields) {
+        this.tooManyFields = tooManyFields;
+    }
+
+    public int getNumberOfLEDs() {
+        return this.numberOfLEDs;
+    }
+
+    public void setNumberOfLEDs(int numberOfLEDs) {
+        this.numberOfLEDs = numberOfLEDs;
+    }    
+
     public String toString() {
-        return "bit rate = " + getBit_rate() + "\n" +
-            "CPU clock speed = " + getCPU_clock_speed() + "\n" +
+        return "bit rate = " + getBitRate() + "\n" +
+            "CPU clock speed = " + getCPUClockSpeed() + "\n" +
             "producer = " + getProducer() + "\n" +
-            "year of production ='" + getYear_of_production() + "\n" +
+            "year of production ='" + getYearOfProduction() + "\n" +
             "name = " + getName() + "\n" +
             "memory = " + getMemory() + "\n" +
             "height = " + getHeight() + "\n" +
             "width = " + getWidth() + "\n" +
-            "too many fields = " + getToo_many_fields() + "\n" +
-            "number of LEDs = " + getNumber_of_LEDs() + "\n";
+            "too many fields = " + getTooManyFields() + "\n" +
+            "number of LEDs = " + getNumberOfLEDs() + "\n";
     }
 
     public static void printStaticWorkingHours() {
-        System.out.println(working_hours);
+        System.out.println(workingHours);
     }
 
     public void printWorkingHours() {
-        System.out.println(working_hours);
+        System.out.println(workingHours);
     }
 
-    public void resetValues(int bit_rate, double CPU_clock_speed, String producer, int year_of_production, 
-    String name, int memory, int height, int width, String too_many_fields, int number_of_LEDs) {
+    public void resetValues(int bitRate, double CPUClockSpeed, String producer, int yearOfProduction, 
+    String name, int memory, int height, int width, String tooManyFields, int numberOfLEDs) {
 
         this.name = name;
         this.memory = memory;
         this.height = height;
         this.width = width;
-        this.too_many_fields = too_many_fields;
-        this.number_of_LEDs = number_of_LEDs;
-        this.bit_rate = bit_rate;
-        this.CPU_clock_speed = CPU_clock_speed;
+        this.tooManyFields = tooManyFields;
+        this.numberOfLEDs = numberOfLEDs;
+        this.bitRate = bitRate;
+        this.CPUClockSpeed = CPUClockSpeed;
         this.producer = producer;
-        this.year_of_production = year_of_production;
+        this.yearOfProduction = yearOfProduction;
     }
 
     
 }
 
-class Main{
+class App{
+
     public static void main(String[] args){
-        Microcontroller My_Microcontroller_1 = new Microcontroller();
-        Microcontroller My_Microcontroller_2 = new Microcontroller(8, 0.76, "Intel", 1987);
-        Microcontroller My_Microcontroller_3 = new Microcontroller(8, 0.011, "Renesas", 1980,
+        Microcontroller myFirstMicrocontroller = new Microcontroller();
+        Microcontroller mySecondMicrocontroller = new Microcontroller(8, 0.76, "Intel", 1987);
+        Microcontroller myThirdMicrocontroller = new Microcontroller(8, 0.011, "Renesas", 1980,
                                                                    "Error", 64, 7, 40, "Sure", 18);
-        System.out.println(My_Microcontroller_1);
-        My_Microcontroller_2.resetValues(1, 2, "erhgeyuge", 2167, "Petro", 1488, 2, 47, "No doubt", 13);
-        System.out.println(My_Microcontroller_2);
-        My_Microcontroller_3.printWorkingHours();
+        System.out.println(myFirstMicrocontroller);
+        mySecondMicrocontroller.resetValues(1, 2, "erhgeyuge", 2167, "Petro", 1488, 2, 47, "No doubt", 13);
+        System.out.println(mySecondMicrocontroller);
+        myThirdMicrocontroller.printWorkingHours();
     }
 }
