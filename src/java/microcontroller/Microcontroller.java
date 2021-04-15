@@ -22,36 +22,17 @@ public class Microcontroller {
     }
 
     public Microcontroller() {
-        bitRate = 64;
-        CPUClockSpeed = 3.6;
-        producer = "Intel";
-
-        yearOfProduction = 2017;
-        name = "Intel core i3";
-        memory = 2048; 
-        height = 2;
-        width = 38;
-
-        tooManyFields = "Yes";
-        numberOfLEDs = 0;
+        this.resetValues(64, 3.6, "Intel", 2017, "Intel core i3", 2048, 2, 38, "Yes", 0);
     }
 
     public Microcontroller(int bitRate, double CPUClockSpeed, String producer, int yearOfProduction) {
-        this.bitRate = bitRate;
-        this.CPUClockSpeed = CPUClockSpeed;
-        this.producer = producer;
-        this.yearOfProduction = yearOfProduction;
+        this.resetValues(bitRate, CPUClockSpeed, producer, yearOfProduction, "Intel core i3", 2048, 2, 38, "Yes", 0);
     }
 
     public Microcontroller(int bitRate, double CPUClockSpeed, String producer, int yearOfProduction, 
                            String name, int memory, int height, int width, String tooManyFields, int numberOfLEDs){
-        this(bitRate, CPUClockSpeed, producer, yearOfProduction);
-        this.name = name;
-        this.memory = memory;
-        this.height = height;
-        this.width = width;
-        this.tooManyFields = tooManyFields;
-        this.numberOfLEDs = numberOfLEDs;
+        this.resetValues(bitRate, CPUClockSpeed, producer, yearOfProduction, name, 
+                         memory, height, width, tooManyFields, numberOfLEDs);
     }
 
     public int getBitRate() {
@@ -169,6 +150,7 @@ public class Microcontroller {
         this.producer = producer;
         this.yearOfProduction = yearOfProduction;
     }
+
 
     
 }
