@@ -2,7 +2,6 @@ package ua.lviv.iot.shop.manager;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,7 +11,7 @@ import ua.lviv.iot.shop.underwear.Underwear;
 
 public class UnderwaerManager {
 
-	public List<Underwear> underwear = new ArrayList<Underwear>();
+	public List<Underwear> underwear = new ArrayList<>();
 	
 	public void addUnderwear(Underwear underwear) {
 		this.underwear.add(underwear);
@@ -38,11 +37,9 @@ public class UnderwaerManager {
 					 		.sorted(Comparator.comparing(Underwear::getPrice))
 					 		.collect(Collectors.toList());
 		}
-		else {
-			return underwear.stream()
+		return underwear.stream()
 					 .sorted(Comparator.comparing(Underwear::getPrice).reversed())
 					 .collect(Collectors.toList());
-		}
 	}
 	
 	public void printUnderwear(List<Underwear> underwear) {

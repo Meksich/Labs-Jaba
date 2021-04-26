@@ -8,7 +8,6 @@ import ua.lviv.iot.shop.underwear.Pants;
 
 public class App {
     public static void main(String[] args) {
-    	System.out.println("aboba");
     	UnderwaerManager manager = new UnderwaerManager();
     	manager.underwear.add(new Bra(Collections.INCREDIBLE, Color.RED, 2018, 20.99,
     			BraStyles.TOP, CupsSize.A, LinningLevel.LIGHTLY_LINED, 0));
@@ -29,23 +28,5 @@ public class App {
 		System.out.println("-----------------------Sort by price------------------------");
 		System.out.println("ORDER: Desc");
 		manager.printUnderwear(manager.sortByPrice(SortOrder.DESC));
-//small_pants = classes.pants.Pants(classes.enums.StalesOfPants.MULTI_PACK,
-//                      classes.enums.PantsSize.XS, 60,
-//                      classes.enums.Fabrics.STEAMLESS,
-//                      classes.enums.Collections.INCREDIBLE, 2021,
-//                      classes.enums.Color.FLORAL, 13)
-//large_pants = classes.pants.Pants(classes.enums.StalesOfPants.SHAPEWEAR,
-//                      classes.enums.PantsSize.XL, 140,
-//                      classes.enums.Fabrics.COTTON,
-//                      classes.enums.Collections.BODY_BY_VICTORIA, 2017,
-//                      classes.enums.Color.GREEN, 228)
-//small_lingerie = classes.lingerie.Lingerie(False, classes.enums.LingerieStyles.CAMIS,
-//                               classes.enums.PantsSize.S,
-//                               classes.enums.Collections.INCREDIBLE, 2019,
-//                               classes.enums.Color.WHITE, 30.30)
-//medium_lingerie = classes.lingerie.Lingerie(True, classes.enums.LingerieStyles.CORSETS,
-//                                classes.enums.PantsSize.M,
-//                                classes.enums.Collections.DREAM_ANGELS, 2021,
-//                                classes.enums.Color.MULTICOLORED, 1488)
     }
 }

@@ -13,13 +13,9 @@ import ua.lviv.iot.shop.enums.LinningLevel;
 public class Bra extends Underwear {
 
 	private BraStyles style;
-	
 	private CupsSize cupsSize;
-	
 	private LinningLevel liningLevel;
-	
 	private Integer numberOfHooks;
-	
 	public Bra(Collections collection, Color color, Integer yearOfProduction, Double price, 
 		         BraStyles style, CupsSize cupsSize, LinningLevel liningLevel, Integer numberOfHooks) {
 	super(collection, color, yearOfProduction, price);

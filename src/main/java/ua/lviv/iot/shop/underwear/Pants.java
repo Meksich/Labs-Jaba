@@ -13,13 +13,9 @@ import ua.lviv.iot.shop.enums.PantsStyles;
 public class Pants extends Underwear{
 
 	private PantsStyles style;
-	
 	private PantsSize size;
-	
 	private Double waistCircumference;
-	
 	private Fabrics fabrics;
-	
 	public Pants(Collections collection, Color color, Integer yearOfProduction, Double price, 
 			     PantsStyles style, PantsSize size, Double waistCircumference, Fabrics fabrics) {
 		super(collection, color, yearOfProduction, price);

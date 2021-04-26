@@ -10,13 +10,9 @@ import ua.lviv.iot.shop.enums.Color;
 public class Underwear {
 
 	protected Collections collection;
-	
 	protected Color color;
-	
 	protected Integer yearOfProduction;
-	
 	protected Double price;
-	
 	public Underwear(Collections collection, Color color, Integer yearOfProduction, Double price) {
 		this.collection = collection;
 		this.color = color;

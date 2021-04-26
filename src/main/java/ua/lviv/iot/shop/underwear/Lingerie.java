@@ -12,11 +12,8 @@ import ua.lviv.iot.shop.enums.PantsSize;
 public class Lingerie extends Underwear{
 	
 	private LingerieStyles style;
-	
 	private PantsSize size;
-	
 	private Boolean sleeveless;
-	
 	public Lingerie(Collections collection, Color color, Integer yearOfProduction, Double price, 
 		     		LingerieStyles style, PantsSize size, Boolean sleeveless) {
 	super(collection, color, yearOfProduction, price);
